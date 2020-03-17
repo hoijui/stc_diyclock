@@ -449,7 +449,7 @@ int main()
         if (count % (uint8_t) 4 == 0) {
             temp = gettemp(getADCResult(ADC_TEMP));
             // auto-dimming, by dividing adc range into 8 steps
-            lightval = getADCResult8(ADC_LIGHT) >> 3;
+            lightval = getADCResult8(ADC_LIGHT) >> 0;
             // set floor of dimming range
             if (lightval < 4) {
                 lightval = 4;
